@@ -20,12 +20,10 @@ class TaskCardView extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Flexible(
+            Container(
               child: getItemImage(context: context),
             ),
-            Flexible(
-              child: getItemInfoWidget(),
-            ),
+            getItemInfoWidget(),
           ],
         ),
       ),
@@ -52,7 +50,7 @@ class TaskCardView extends StatelessWidget {
       );
 
   getItemInfoWidget() => Padding(
-        padding: EdgeInsets.all(8.w),
+        padding: EdgeInsets.symmetric(vertical:  8.w),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

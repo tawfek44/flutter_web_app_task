@@ -49,6 +49,7 @@ class _HomeScreenMobileState extends State<HomeScreenMobile> {
         ),
       ),
       body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 15.w),
           child: Column(
@@ -65,6 +66,7 @@ class _HomeScreenMobileState extends State<HomeScreenMobile> {
               ListView.builder(
                 itemCount: 20,
                 shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (context, index) => const TaskCardView(),
               )
             ],
